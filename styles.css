@@ -1,0 +1,149 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #121212;
+    color: #f4f4f4;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Links */
+a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00a396;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(to bottom, #0a0a0a, #121212);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero h1 span {
+    color: #00ffcc;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #00ffcc;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #00a396;
+}
+
+/* Navigation */
+.nav {
+    background: #0a0a0a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    list-style: none;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #00ffcc;
+}
+
+/* Section */
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin: 10px 0;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    color: #00ffcc;
+}
+
+/* Footer */
+.footer {
+    padding: 20px 0;
+    background: #0a0a0a;
+    color: #b3b3b3;
+}
