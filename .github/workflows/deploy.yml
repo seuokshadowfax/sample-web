@@ -23,5 +23,4 @@ jobs:
           source: "index.html"
           target: "/var/www/html/"
           command: |
-            sudo mv /var/www/html/index.html /var/www/html/index.html.bak
-            sudo cp index.html /var/www/html/
+            sudo tar -xvf index.html -C /var/www/html/
