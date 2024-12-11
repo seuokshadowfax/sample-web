@@ -1,0 +1,24 @@
+name: Deploy HTML to AWS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Transfer Files to AWS Server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.AWS_USERNAME }}
+          key: ${{ secrets.AWS_KEY }}
+          port: 22
+          source: "index.html"
+          target: "/var/www/html/"
