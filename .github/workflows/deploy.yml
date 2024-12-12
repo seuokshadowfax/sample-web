@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Deploy HTML
+      - name: Transfer Files to AWS Server
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.AWS_HOST }}
@@ -22,5 +22,3 @@ jobs:
           port: 22
           source: "index.html"
           target: "/var/www/html/"
-          command: |
-            sudo tar -xvf index.html -C /var/www/html/
